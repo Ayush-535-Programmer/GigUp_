@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp"
+    android:textAlignment="textStart">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="Add a new task for others to complete"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:text="ASK FOR A TASK"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:text="Title"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/userUploadTitle"
+        android:layout_width="350dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="10dp"
+        android:ems="10"
+        android:hint="Enter title of the task"
+        android:inputType="text"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="12dp"
+        android:text="Category"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/ttView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userUploadTitle" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/ttView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        android:hint="Choose Category"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+
+        <AutoCompleteTextView
+            android:id="@+id/UserUpload_auto_completeTextview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="none"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <EditText
+        android:id="@+id/userUploadPrice"
+        android:layout_width="350dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="10dp"
+        android:ems="10"
+        android:hint="Set a reasonable price"
+        android:inputType="number"
+        android:maxLength="7"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="18dp"
+        android:text="Set price (can be negotiated)"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ttView" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="32dp"
+        android:text="Detailed task description"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userUploadPrice" />
+
+    <EditText
+        android:id="@+id/userUploadDesc"
+        android:layout_width="350dp"
+        android:layout_height="153dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="0dp"
+        android:ems="10"
+        android:hint="Write description (max 350 words)"
+        android:inputType="textMultiLine"
+        android:layout_marginEnd="10dp"
+        android:gravity="top|start"
+
+        android:maxLength="350"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+    <Button
+        android:id="@+id/addTask"
+        android:layout_width="300dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="#222222"
+        android:text="ADD TASK"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userUploadDesc" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

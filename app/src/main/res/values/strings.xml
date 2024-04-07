@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">GigUp</string>
+    <string name="choose_university">Choose University</string>
+    <string name="slogan">Skills meet hustle</string>
+    <string name="default_web_client_id">null</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/userHomeLinear"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".UserHome">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="16dp"
+            android:text="GigUp"
+            android:textSize="34sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="9dp"
+            android:text="Filter tasks"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/horizontalScrollView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+
+        <HorizontalScrollView
+            android:id="@+id/horizontalScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+            android:paddingStart="2dp"
+            android:paddingEnd="3dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView5">
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="409dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView5">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:background="@drawable/background_round"
+                    android:backgroundTint="#FFD8D8"
+                    android:text="#pickup" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/background_round"
+                    android:backgroundTint="#9CDAED"
+                    android:padding="10dp"
+                    android:text="#assignment" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/background_round"
+                    android:backgroundTint="#F6E48D"
+                    android:padding="10dp"
+                    android:text="#studies" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/background_round"
+                    android:backgroundTint="#FAADFF"
+                    android:padding="10dp"
+                    android:text="#project" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/background_round"
+                    android:backgroundTint="#A4F1B4"
+                    android:padding="10dp"
+                    android:text="#miscellenous" />
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/homeRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="200dp"
+                android:paddingBottom="200dp"
+                tools:layout_editor_absoluteY="152dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/horizontalScrollView"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:listitem="@layout/recycler_home"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</LinearLayout>

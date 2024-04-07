@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "31086407071",
+    "project_id": "gigup-28caa",
+    "storage_bucket": "gigup-28caa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:31086407071:android:68c1f27a13dc7a386f21aa",
+        "android_client_info": {
+          "package_name": "com.example.gigup"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDji-1yG_ByF-sOAC-fIRr-ejNcLFK63TI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

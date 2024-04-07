@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:backgroundTint="@color/off_white"
+    android:background="@color/off_white"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="35sp"
+        android:paddingStart="25dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/app_name"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="20dp"
+        android:textSize="18sp"
+        android:layout_marginTop="10dp"
+        android:text="@string/slogan"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="1dp"
+        android:backgroundTint="#F8F5F5"
+        android:layout_margin="15dp"
+        app:cardCornerRadius="5dp"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <SearchView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:queryHint="Search University"
+                android:background="@drawable/background_round"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="22dp"
+                android:layout_marginTop="20dp"
+                android:text="Select University"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:hint="@string/choose_university"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+
+                <AutoCompleteTextView
+                    android:id="@+id/auto_completeTextview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/btnContinue"
+                android:layout_width="300dp"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="@color/background_black"
+                android:text="Continue"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    
+
+
+
+
+
+</LinearLayout>
